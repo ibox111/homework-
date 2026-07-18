@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+			rel="stylesheet" />
+		<title>CSS Concepts in Action</title>
+		<style>
+			* {
+	box-sizing: border-box;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	color: #131444;
+	background-color: #e2d4fa;
+	background-image:
+		radial-gradient(circle at 10% 10%, #93cbfb 0%, transparent 60%),
+		radial-gradient(circle at 90% 10%, #ee931c 0%, transparent 70%),
+		radial-gradient(circle at 80% 90%, #df1692 0%, transparent 65%),
+		radial-gradient(circle at 20% 90%, #601fd8 0%, transparent 65%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	margin: 4rem auto;
+	padding: 2rem;
+	display: grid;
+	gap: 3rem;
+	width: 1000px;
+}
+
+.container > div {
+	border-radius: 10px;
+}
+
+/* hero section ---------------------------- */
+
+.hero-cont hr {
+	border: none;
+	height: 0.2rem;
+	width: 7rem;
+	background: linear-gradient(to right, #6c54ff, #df1692);
+	border-radius: 5px;
+}
+
+.hero-cont p {
+	margin-bottom: 0;
+}
+
+/* nav section ------------------------- */
+
+.nav-container,
+.logo-box,
+.nav-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.nav-container {
+	background-color: #131444;
+	padding: 0.5rem 2rem;
+	color: white;
+}
+
+.logo-box {
+	font-weight: bold;
+	gap: 1rem;
+}
+
+.logo {
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background: linear-gradient(135deg, #6c54ff 0%, #df1692 100%);
+	transform: rotateZ(-45deg);
+}
+
+.nav-box {
+	list-style: none;
+}
+
+/* card section ------------------------- */
+
+.card-cont {
+	display: flex;
+	gap: 1rem;
+}
+
+.card-cont > * {
+	border-radius: 10px;
+	padding: 1rem;
+	width: 100%;
+}
+
+/* transform card */
+
+.transform-box {
+	background-color: #e9e0fb;
+}
+
+.transform-box h3 {
+	color: #df1692;
+}
+
+.diamond-3d {
+	width: 180px;
+	height: 180px;
+	border-radius:  8px;
+	background: linear-gradient(135deg, #6c54ff 0%, #df1692 100%);
+	transform: rotateZ(-45deg) scale(0.5) translate(-0.5rem);
+
+	/* Use shadow to make it look 3D */
+	box-shadow:
+		1px 1px 0px #5e3cde,
+		2px 2px 0px #5e3cde,
+		3px 3px 0px #5e3cde,
+		4px 4px 0px #5e3cde,
+		5px 5px 0px #5e3cde,
+		6px 6px 0px #5e3cde,
+		7px 7px 0px #5e3cde,
+		8px 8px 0px #5e3cde,
+		9px 9px 0px #5e3cde,
+		10px 10px 0px #5e3cde,
+		11px 11px 0px #5e3cde,
+		12px 12px 0px #4b2ab9,
+		-18px 25px 40px rgba(94, 60, 222, 0.4),
+		-18px 35px 60px rgba(94, 60, 222, 0.2);
+}
+
+/* navbar card */
+
+.navbar-box {
+	background-color: #e0e7fa;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.navbar-box h3 {
+	color: #4676c9;
+}
+
+.navbar-box .header-box {
+	background-color: #131444;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	gap: 1.5rem;
+	border-radius: 5px;
+	margin-top: 20%;
+	box-shadow: 2px 6px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header-box .logo-box {
+	font-size: 0.7rem;
+	gap: 0.5rem;
+	font-weight: normal;
+}
+
+.header-box .logo-box .logo {
+	width: 20px;
+	height: 20px;
+}
+
+/* box sizing card */
+
+.boxsizing-box {
+	background-color: #f7f2f6;
+	display: flex;
+	flex-direction: column;
+}
+
+.boxsizing-box h3 {
+	color: #398a55;
+}
+
+.boxsizing-box .box {
+	height: 100px;
+	background-color: #8af086;
+	border: 5px solid #0fcc08;
+	border-radius: 8px;
+	padding: 1rem;
+	margin-top: auto;
+}
+
+.box p {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #4fb6b5;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-color {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	font-size: 0.7rem;
+	margin-top: auto;
+}
+
+.box-color li {
+	padding-left: 1rem;
+	position: relative;
+}
+
+.box-color li::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+}
+
+.box-color li:nth-child(1)::before {
+	background-color: #359448;
+}
+
+.box-color li:nth-child(2)::before {
+	background-color: #b0d6af;
+}
+
+.box-color li:nth-child(3)::before {
+	background-color: #4fb6b5;
+}
+
+/* gradient card */
+
+.gradient-box {
+	background-color: #fbf0ec;
+	display: flex;
+	flex-direction: column;
+}
+
+.gradient-box h3 {
+	color: #ff5900;
+}
+
+.gradient {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #5e3cde 25%, #ff5900 60%, #feb73b 75%);
+	border-radius: 5px;
+}
+
+/* footer section ------------------- */
+
+.footer-cont {
+	background-color: #13144456;
+	color: white;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="hero-cont">
+				<h1>CSS Concepts in Action</h1>
+				<hr />
+				<p>A simple demonstration of four important CSS concepts</p>
+			</div>
+			<div class="nav-container">
+				<div class="logo-box">
+					<div class="logo"></div>
+					<a href="#">My Website</a>
+				</div>
+				<ul class="nav-box">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="card-cont">
+				<div class="transform-box">
+					<h3>CSS Transform</h3>
+					<p>A Box is rotated, scaled, and moved.</p>
+					<div class="diamond-3d"></div>
+				</div>
+				<div class="navbar-box">
+					<h3>Navbar</h3>
+					<p>A fixed navigation bar at the top of the page.</p>
+					<div class="header-box">
+						<div class="logo-box">
+							<div class="logo"></div>
+							<a href="#">My Website</a>
+						</div>
+						<div class="burger-box">
+							<i class="fa fa-bars"></i>
+						</div>
+					</div>
+				</div>
+				<div class="boxsizing-box">
+					<h3>Box-sizing</h3>
+					<p>Padding and border are included in the size.</p>
+					<div class="box">
+						<p>Content</p>
+					</div>
+					<ul class="box-color">
+						<li>Border</li>
+						<li>Padding</li>
+						<li>Content</li>
+					</ul>
+				</div>
+				<div class="gradient-box">
+					<h3>Gradient (Aigulo)</h3>
+					<p>A diagonal gradient creates a smooth color transition.</p>
+					<div class="gradient"></div>
+				</div>
+			</div>
+			<div class="footer-cont">
+				<p>⭐ Using CSS Transform, Navbar, Box-sizing, and Gradient (Aigulo)</p>
+			</div>
+		</div>
+	</body>
+</html>
