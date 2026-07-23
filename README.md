@@ -1,2 +1,0 @@
-# homework-
-for wd class
